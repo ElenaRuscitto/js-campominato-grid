@@ -14,19 +14,26 @@
 </head>
 <body>
 
-  <header class="d-flex justify-content-between text-center px-3">
+  <header class="d-flex justify-content-between  px-3">
 
-    <div>
-      <div>
-        <img src="img/mobile-logo.png" alt="" class="logo">
-        <h1>Campo Minato</h1>
+    <div class="h-100 align-items-center">
+      <div class="d-flex py-4 h-100 align-items-center">
+        <img src="img/mobile_logo.png" alt="" class="logo">
+        <h1 class="my-2">Campo Minato</h1>
       </div>
       
-
     </div>
-    
-    <div>
-      <button type="button" class="btn btn-light btn-play">Play</button>
+
+    <div class="my-4 d-flex align-items-center ">
+     
+      <select class="difficolta form-select"> 
+        <option selected>Difficoltà</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button type="button" class="btn btn-light btn-play mx-3">Play</button>
     </div>
   </header>
 
@@ -41,8 +48,8 @@
 
   </main>
 
-  <footer class="px-3">
-    <p>Made whit love &#10084; by Boolean</p>
+  <footer class="px-3 ">
+    <span>Made whit love &#10084; by <a href="">Boolean</a></span>
   </footer>
 
 

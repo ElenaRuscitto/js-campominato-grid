@@ -2,6 +2,7 @@
 // 0.
 const containerBox = document.querySelector('.box');
 const btnPlay = document.querySelector('.btn-play');
+const livelDiff = document.querySelector('.difficolta');
 
 
 reset();
@@ -10,10 +11,6 @@ console.log(reset);
 
 
 btnPlay.addEventListener('click', startPlay);
-
-
-
-
 
 
 
@@ -28,14 +25,30 @@ function reset() {
 }
 
 // 1. al click del bottone Play, si vede la griglia di gioco
-function startPlay() {
+function startPlay (){
+  reset ();
+  const sceltaDiff = livelDiff.value;
+  let numeriContati = 100;
 
-  // 3.
-  for (let i = 1; i <= 100; i++) {
-    const square = generate (i);
-    containerBox.append(square);  //4. stampo gli square in html
+  if (sceltaDiff == 'medium') {
+    numeriContati = 81;
+  }else if (sceltaDiff == 'hard'){
+    numeriContati = 49;
   }
-   
+
+  for (let i = 1; i <= numeriContati; i++){
+    const square = generate(i) ;
+
+    if (sceltaDiff == 'medium') {
+      square.classList.add('sq-medium');
+      
+    }else if (sceltaDiff == 'hard') {
+      square.classList.add('sq-hard');
+    }
+
+    containerBox.append(square);
+  }
+
 }
 
 // creazione div: square
@@ -45,10 +58,11 @@ function generate(numeri) {
  
   sq.sqID = numeri;
 
-  // 5. aggiungo i numeri agli squer
+  // 5. aggiungo i numeri agli square
   sq.addEventListener('click', function(){
     console.log(this);
     console.log(numeri);
+
   /** CON IF
     if(this.innerHTML === ''){
       this.innerHTML = this.sqID;
