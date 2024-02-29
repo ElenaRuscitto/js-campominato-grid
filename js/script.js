@@ -48,7 +48,7 @@ function generate(numeri) {
   // 5. aggiungo i numeri agli squer
   sq.addEventListener('click', function(){
     console.log(this);
-
+    console.log(numeri);
   /** CON IF
     if(this.innerHTML === ''){
       this.innerHTML = this.sqID;
@@ -58,11 +58,13 @@ function generate(numeri) {
   */
 
     // METODO TERNARIO
-    this.innerHTML = (this.innerHTML === '') ? this.innerHTML = this.sqID : this.innerHTML = '';
+    this.innerHTML = (this.innerHTML === '') ? this.innerHTML = numeri : this.innerHTML = '';
 
     // 6. cambio colore al click con azzurro
-    this.classList.toggle('.clicked')
+    this.classList.toggle('sqClicked');
 
+    console.log(sqClicked);
+   
   })
 
   return sq;
