@@ -22,6 +22,7 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 3. ciclo (for) di 100 ripetizioni
 4. ad ogni ciclo creo un quadrato dentro la griglia
 5. aggiungiamo un numero progressivo ad ogni quadrato
+6. al click lo square cambia il colore in azzurro
 
    -CREAZIONE SQUARE:
    A. creo elemento html in js

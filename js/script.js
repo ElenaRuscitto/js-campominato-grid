@@ -9,7 +9,7 @@ console.log(reset);
 
 
 
-btnPlay.addEventListener('click', startPlay()  );
+btnPlay.addEventListener('click', startPlay);
 
 
 
@@ -33,15 +33,39 @@ function startPlay() {
   // 3.
   for (let i = 1; i <= 100; i++) {
     const square = generate (i);
-    containerBox.append(square)  //4. stampo gli square in html
+    containerBox.append(square);  //4. stampo gli square in html
   }
+   
 }
 
 // creazione div: square
-function generate() {
+function generate(numeri) {
   const sq = document.createElement ('div')  //A
   sq.className = 'square' //B
-  console.log(sq);
+ 
+  sq.sqID = numeri;
+
+  // 5. aggiungo i numeri agli squer
+  sq.addEventListener('click', function(){
+    console.log(this);
+
+  /** CON IF
+    if(this.innerHTML === ''){
+      this.innerHTML = this.sqID;
+    }else{
+      this.innerHTML = '';
+    }
+  */
+
+    // METODO TERNARIO
+    this.innerHTML = (this.innerHTML === '') ? this.innerHTML = this.sqID : this.innerHTML = '';
+
+    // 6. cambio colore al click con azzurro
+    this.classList.toggle('.clicked')
+
+  })
+
+  return sq;
 }
 
 
