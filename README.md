@@ -17,9 +17,15 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 ## SVOLGIMENTO
 0. creo container e salvo in variabile
-1. bottone di generazione della griglia
+1. creo bottone di generazione della griglia
 2. reset dei contenuti del box
 3. ciclo (for) di 100 ripetizioni
 4. ad ogni ciclo creo un quadrato dentro la griglia
 5. aggiungiamo un numero progressivo ad ogni quadrato
+
+   -CREAZIONE SQUARE:
+   A. creo elemento html in js
+   B. associo alla classe SQUARE
+   C. associo a square il valore(numero)
+   D. associo al click i nostri valori al click
 
