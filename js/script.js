@@ -2,19 +2,14 @@
 // 0.
 const containerBox = document.querySelector('.box');
 const btnPlay = document.querySelector('.btn-play');
+
+
 reset();
-
-// 3.
-for (let i = 1; i <= 100; i++) {
-  const square = generate (i);
-  containerBox.append(square)  //4. stampo gli square in html
-}
+console.log(reset);
 
 
-btnPlay.addEventListener('click', function() {
 
-})
-
+btnPlay.addEventListener('click', startPlay()  );
 
 
 
@@ -29,12 +24,17 @@ btnPlay.addEventListener('click', function() {
 
 // 2.reset
 function reset() {
-  container.innerHTML= '';
+  containerBox.innerHTML= '';
 }
 
 // 1. al click del bottone Play, si vede la griglia di gioco
 function startPlay() {
-  
+
+  // 3.
+  for (let i = 1; i <= 100; i++) {
+    const square = generate (i);
+    containerBox.append(square)  //4. stampo gli square in html
+  }
 }
 
 // creazione div: square
